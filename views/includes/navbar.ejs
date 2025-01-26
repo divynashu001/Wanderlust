@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-sm border-bottom sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-link" href="/listings">Explore</a>
+        
+      </div>
+      <style>
+        
+        .search-btn{
+          background-color: #fe424d;
+          color: white;
+          border-radius: 25px;
+          padding: 0 1rem 0 1rem;
+        }
+        .search-btn:hover{
+          background-color: #fe424d;
+          color: white;
+        }
+        .search-btn i{
+          display: inline;
+          padding-right: 0.5rem;
+          font-size: 0.9rem;
+        }
+        .input-search{
+          border-radius: 25px;
+         padding-left: 1.5rem;
+         width: 500px;
+         font-size: 0.9rem;
+         margin:0 1.5rem 0 1.5rem;
+        }
+      </style>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex me-2" role="search">
+          <input class="form-control input-search" type="search" placeholder="Search destinations" >
+          <button class="btn search-btn" type="submit"> <i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Add New Listing</a>
+        <% if(!currUser) { %>
+        <a class="nav-link"  href="/signup"><b>SignUp</b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+        <% if(currUser){ %>
+        <a class="nav-link" href="/logout"><b>Log Out</b></a>
+        <%} %>
+      </div>
+    </div>
+  </div>
+</nav>
