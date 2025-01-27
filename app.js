@@ -96,6 +96,10 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("listing/Error.ejs", { message });
 });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings"); // Redirect to the listings page
+});
+
 app.listen(3000,()=>{
   console.log("Server is listening to port 3000")
 });
